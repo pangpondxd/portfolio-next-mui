@@ -2,6 +2,7 @@ import { GlobalStyles } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import Navbar from "components/Navbar";
 import ContainerCustom from "components/Page";
+import { RecoilRoot } from "recoil";
 import { theme } from "styles/theme";
 import "../styles/globals.css";
 
@@ -12,7 +13,9 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <GlobalStyles styles={styles} />
         <Navbar />
-        <Component {...pageProps} />
+        <RecoilRoot>
+          <Component {...pageProps} />
+        </RecoilRoot>
       </ThemeProvider>
     </ContainerCustom>
   );
