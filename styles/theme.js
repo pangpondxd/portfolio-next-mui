@@ -16,6 +16,6 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "monospace",
+    fontFamily: "Quicksand",
   },
 });

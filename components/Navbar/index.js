@@ -100,7 +100,7 @@ export default function Navbar() {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
-      style={{ zIndex: 1 }}
+      style={{ position: isOpen ? "absolute" : "inherit" }}
     >
       <motion.div className="background" variants={sidebar} />
       <motion.ul variants={variants}>

@@ -14,15 +14,24 @@ export default function BreadcrumbsCustom(props) {
     >
       <Breadcrumbs aria-label="breadcrumb">
         {props.menu.map((menu, index) => (
-          <>
+          <Grid container>
             {menu?.to ? (
               <Link underline="hover" color="inherit" href={menu?.to}>
                 {menu.title}
               </Link>
             ) : (
-              <Typography sx={{ cursor: "initial" }}>{menu.title}</Typography>
+              <Typography
+                sx={{
+                  cursor: "initial",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  fontSize: 35,
+                }}
+              >
+                {menu.title}
+              </Typography>
             )}
-          </>
+          </Grid>
         ))}
       </Breadcrumbs>
     </Grid>

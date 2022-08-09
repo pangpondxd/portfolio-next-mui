@@ -1,13 +1,19 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Paper, Typography } from "@mui/material";
 import BreadcrumbsCustom from "components/Breadcrumbs";
 import ContainerCustom from "components/Page";
 export default function ContactMe() {
   return (
-    <ContainerCustom>
-      <BreadcrumbsCustom
+    <>
+      {/* <BreadcrumbsCustom
         menu={[{ title: "Home", to: "/" }, { title: "Contact Me" }]}
-      />
-      <Typography>Contact Me</Typography>
-    </ContainerCustom>
+      /> */}
+      <Paper variant="outlined" sx={{ p: 4 }}>
+        <Typography>
+          testasdasdasdasdasdasdasdasdasdasdtestasdasdasdasdasdasdasdasdasdasd
+          testasdasdasdasdasdasdasdasdasdasd testasdasdasdasdasdasdasdasdasdasd
+          testasdasdasdasdasdasdasdasdasdasd testasdasdasdasdasdasdasdasdasdasd
+        </Typography>
+      </Paper>
+    </>
   );
 }

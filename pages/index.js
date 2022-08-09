@@ -12,9 +12,7 @@ export default function Home() {
         <meta name="description" content="Tanawat Wirattangsakul Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ContainerCustom>
-        <Profile />
-      </ContainerCustom>
+      <Profile />
     </Grid>
   );
 }

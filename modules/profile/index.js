@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Profile() {
   return (
     <>
-      <BreadcrumbsCustom menu={[{ title: "Home" }]} />
+      {/* <BreadcrumbsCustom menu={[{ title: "Home" }]} /> */}
       <Paper variant="outlined" sx={{ p: 4 }}>
         <Typography>
           testasdasdasdasdasdasdasdasdasdasdtestasdasdasdasdasdasdasdasdasdasd

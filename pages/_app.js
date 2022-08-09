@@ -15,8 +15,18 @@ function MyApp({ Component, pageProps }) {
         <GlobalStyles styles={styles} />
         <RecoilRoot>
           <Navbar />
-          <Grid sx={{ position: "relative" }}>
-            <Component {...pageProps} />
+          <Grid
+            item
+            sx={{
+              display: {
+                xs: "none",
+                sm: "inherit",
+              },
+            }}
+          >
+            <ContainerCustom>
+              <Component {...pageProps} />
+            </ContainerCustom>
           </Grid>
         </RecoilRoot>
       </ThemeProvider>
