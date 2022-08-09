@@ -14,7 +14,7 @@ export default function BreadcrumbsCustom(props) {
     >
       <Breadcrumbs aria-label="breadcrumb">
         {props.menu.map((menu, index) => (
-          <Grid container>
+          <Grid container key={index}>
             {menu?.to ? (
               <Link underline="hover" color="inherit" href={menu?.to}>
                 {menu.title}
