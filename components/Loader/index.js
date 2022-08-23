@@ -5,7 +5,7 @@ export default function Loader() {
   return (
     <Grid minHeight="100vh">
       <Container maxWidth="sm">
-        <Typography>test</Typography>
+        <Typography>Loader</Typography>
       </Container>
     </Grid>
   );

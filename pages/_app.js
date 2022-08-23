@@ -1,37 +1,25 @@
 import { GlobalStyles, Grid } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import Navbar from "components/Navbar";
 import ContainerCustom from "components/Page";
-import { LayoutGroup } from "framer-motion";
 import { RecoilRoot } from "recoil";
 import { theme } from "styles/theme";
-import "../styles/globals.css";
-
+import React from "react";
+import "styles/globals.css";
+import { appWithTranslation } from "next-i18next";
 function MyApp({ Component, pageProps }) {
   const styles = {};
   return (
-    <ContainerCustom>
+    <>
       <ThemeProvider theme={theme}>
-        <GlobalStyles styles={styles} />
-        <RecoilRoot>
-          <Navbar />
-          <Grid
-            item
-            sx={{
-              display: {
-                xs: "none",
-                sm: "inherit",
-              },
-            }}
-          >
-            <ContainerCustom>
-              <Component {...pageProps} />
-            </ContainerCustom>
-          </Grid>
-        </RecoilRoot>
+        <ContainerCustom>
+          <RecoilRoot>
+            <GlobalStyles styles={styles} />
+            <Component {...pageProps} />
+          </RecoilRoot>
+        </ContainerCustom>
       </ThemeProvider>
-    </ContainerCustom>
+    </>
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

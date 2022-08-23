@@ -1,21 +1,22 @@
-import { Paper, Typography } from "@mui/material";
+import React from "react";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Head from "next/head";
 export default function Profile() {
   return (
-    <>
-      <Head>
-        <title>ธนวัฒน์ วิรัชตั้งสกุล</title>
-        <meta property="og:title" content="Tanawat Wirattangsakul" />
-        <meta property="og:title" content="ธนวัฒน์ วิรัชตั้งสกุล" />
-      </Head>
+    <Grid>
       {/* <BreadcrumbsCustom menu={[{ title: "Home" }]} /> */}
-      <Paper variant="outlined" sx={{ p: 4 }}>
-        <Typography>
-          testasdasdasdasdasdasdasdasdasdasdtestasdasdasdasdasdasdasdasdasdasd
-          testasdasdasdasdasdasdasdasdasdasd testasdasdasdasdasdasdasdasdasdasd
-          testasdasdasdasdasdasdasdasdasdasd testasdasdasdasdasdasdasdasdasdasd
-        </Typography>
-      </Paper>
-    </>
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <Grid container bgcolor="#fff" borderRadius={2.5}>
+            <Typography>Hello</Typography>
+          </Grid>
+        </Grid>
+        <Grid item xs={6}>
+          <Grid container bgcolor="#fff" borderRadius={2.5} p={2}>
+            <Typography>นายธนวัฒน์ วิรัชตั้งสกุล</Typography>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
